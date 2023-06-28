@@ -1,5 +1,4 @@
 // import 'layout/header';
-
 import "../styles/layout/Header.scss";
 
 
@@ -9,7 +8,7 @@ function Header() {
     <header className='header'>
       <div className='icon'>
        
-        <p className='text'>Creative Project Hub</p>
+        <p className='text'>Project Gallery</p>
       </div>
      
     </header>

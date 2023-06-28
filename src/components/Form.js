@@ -38,7 +38,7 @@ function Form({
             required
             className='project__input'
             type='text'
-            placeholder='Nombre del proyecto'
+            placeholder='Project name'
             name='name'
             id='name'
             minLength={2}
@@ -82,7 +82,7 @@ function Form({
             required
             className='project__input'
             type='text'
-            placeholder='Tecnologías'
+            placeholder='Tecnologies'
             name='technologies'
             id='technologies'
             value={data.technologies}
@@ -92,7 +92,7 @@ function Form({
           <textarea
             className='project__textarea'
             type='text'
-            placeholder='Descripción'
+            placeholder='Description'
             name='desc'
             id='desc'
             value={data.desc}
@@ -110,7 +110,7 @@ function Form({
             required
             className='autor__input'
             type='text'
-            placeholder='Nombre'
+            placeholder='Name'
             name='autor'
             id='autor'
             value={data.autor}
@@ -120,7 +120,7 @@ function Form({
           <input
             className='autor__input'
             type='text'
-            placeholder='Trabajo'
+            placeholder='Work'
             name='job'
             id='job'
             value={data.job}
@@ -132,14 +132,14 @@ function Form({
         <section className='buttons-images'>
           <GetAvatar
             className='buttons-img__btn'
-            text='Subir foto de proyecto'
+            text='Upload project photo'
             updateAvatar={updatePhoto}
             handleClickCreateCard={handleClickCreateCard}
           />
 
           <GetAvatar
             className='buttons-img__btn'
-            text='Subir foto de autora'
+            text='Upload author photo'
             updateAvatar={updateImages}
             handleClickCreateCard={handleClickCreateCard}
           />
@@ -147,7 +147,7 @@ function Form({
         <section className='buttons-img-2'>
           <Button
             className='buttons-img-2__btn-large'
-            text='Crear Tarjeta'
+            text='Create Card'
             handleClickCreateCard={handleClickCreateCard}
           />
           <button title="Haz click aquí para empezar desde cero" onClick={handleResetButton} className='button-reset'>
