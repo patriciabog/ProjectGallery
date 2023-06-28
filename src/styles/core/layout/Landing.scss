@@ -1,0 +1,70 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.container__landing {
+    padding: 20px;
+    height: 90vh;
+}
+
+.main__landing {
+    height: 90%;
+    &__container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $color-white;
+
+    &__title {
+        font: $font-montserrat-bold-40px;
+    }
+    &__subtitle {
+        font: $font-montserrat-light-18px;
+        margin-top: 1rem;
+        padding: 0 2rem;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+        &__button-new-project {
+            font: $font-montserrat-bold-12px;
+            border: none;
+            text-transform: uppercase;
+            color: $color-violet;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom, $color-white, $color-white), linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
+            padding: 0.5rem;
+            animation: wiggle 3s infinite;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+        &__button-view-projects {
+            font: $font-montserrat-bold-12px;
+            border: none;
+            text-transform: uppercase;
+            color: $color-white;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom, $color-top-gradient-violet, $color-top-gradient-violet), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
+            padding: 0.5rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+}
+
+.min-height {
+    min-height: 78rem;
+    @include tablet {
+        min-height: 55rem;
+    }
+    @include desktop {
+        min-height: 65rem;
+    }
+}

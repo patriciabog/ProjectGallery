@@ -1,0 +1,105 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+
+
+html {
+  background-color: #302c42;
+}
+
+.container {
+    margin: 5px;
+    background-color: #302c42;
+    // height: 100vh;
+    padding: 15px 15px;
+    height: 100%;
+    @include tablet {
+ 
+    }
+    @include desktop {
+      padding: 15px 25px;
+ 
+    }
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    height: 100%;
+    overflow-y: scroll;
+
+    // height: 80vh;
+    
+    @include tablet {
+        padding: 10px 0 20px 0;
+        flex-direction: row;
+        gap: 20px;
+    //  padding-top: 2rem;
+
+ 
+    }
+    @include desktop {
+      // display:flex;
+      // flex-direction: row;
+      // padding-top:150px;
+      // align-items:center;
+      // width: 100vw;
+     // padding-top: 1rem;
+
+    }
+  }
+
+.main .image {
+  object-fit: cover;
+  // width: 80vw;
+  width: 100%;
+  height: 80%;
+
+  @include tablet {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+    // height: 70vw;
+ 
+  }
+  @include desktop {
+    object-fit: cover;
+    width: 95%;
+    height: 70%;
+    
+  }
+}
+
+.preview {
+  overflow-y: scroll;
+  @include tablet {
+    width: 60%;
+  }
+  @include desktop {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.autor{
+  overflow-y: scroll;
+}
+
+.header__link {
+  color: red;
+}
+
+  .errorMessage {
+    text-align: center;
+    font: $font-poppins-ligth-10px;
+    color: #ff4747;
+    margin: auto;
+    @include tablet {
+      font-size: 12px;
+    }
+    @include desktop {
+
+    }
+  }

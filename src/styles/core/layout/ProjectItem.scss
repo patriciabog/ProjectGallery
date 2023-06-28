@@ -1,0 +1,22 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.pi{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.pi__icons{
+    display: flex;
+    flex-direction: column;
+    
+    color:rgb(255, 255, 255); 
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.fa-expand{
+    margin-left: 10px;
+    color:rgb(255, 255, 255); 
+}

@@ -1,0 +1,52 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.main__error{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $color-white;
+    height: 90vh;
+    @include tablet {
+        padding: 40px;
+    }
+    @include desktop {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    &__image {
+    width: 20rem;
+    margin: auto;  
+    @include desktop {
+        width: 30rem;
+        margin: 0;
+        margin-top: 6rem;
+    }
+    }
+    &__title {
+        font: $font-montserrat-bold-40px;
+    }
+    &__text {
+        margin-top: 1rem;
+        line-height: 1.5rem;
+        font: $font-poppins-medium-24px;
+    }
+    &__span {
+        font: $font-montserrat-light-15px;
+        margin-top: 1rem;
+    }
+    &__links__paragraph {
+        margin-top: 2rem;
+        font: $font-montserrat-light-18px;
+    }
+    &__container {
+        margin-top: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        font: $font-poppins-medium-14px;
+        &__home, &__new-project {
+            color: $color-white;
+        }
+    }
+}

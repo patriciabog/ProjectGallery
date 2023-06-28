@@ -1,0 +1,26 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.footer {
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    // margin-top: 1rem;
+    padding: 0 20px;
+    border-top: solid 1px #7a7885;
+    // margin-top: 500px;
+    &__icon {
+        color: white;
+        font-size: 2rem;
+    }
+    &__logo {
+        &__logo-adalab {
+            width: 6rem;
+            height: 2rem;
+        }
+    }
+}

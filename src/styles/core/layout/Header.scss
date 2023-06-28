@@ -1,0 +1,34 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.header {
+  //padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 1.5rem;
+  @include tablet {
+    // margin-bottom: 6.5rem;
+  }
+
+  &__icon {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+  }
+  .text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: $font-poppins-ligth-14px;
+}
+
+.logo-adalab {
+  width: 6rem;
+}

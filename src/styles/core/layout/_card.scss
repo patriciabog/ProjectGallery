@@ -1,0 +1,224 @@
+//_autor.css
+
+@import "../core/mixins";
+@import "../core/variables";
+.author {
+  background-color: rgb(255, 255, 255);
+  color: #3e3e3e;
+  width: 80vw;
+  min-height: 26vw;
+  transform: translateY(-50px);
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 13px;
+  padding: 22px 25px 20px 25px;
+  //overflow-y: scroll;
+
+  @include tablet {
+    width: 85%;
+    //height:300px;
+    padding: 0px 50px;
+    gap: 22px;
+    //
+    
+    
+  }
+
+  &__ip {
+    width: 60%;
+    font-family: "Poppins";
+    font-family: "Catamaran";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &__subtitle {
+      
+      font-size: 8px;
+      color: $color-violet;
+      text-align: left;
+      text-transform: capitalize;
+      text-decoration: wavy;
+      @include tablet {
+        margin-top: 33px;
+        font-size: 10px;
+      }
+    }
+    &__title {
+      font-size: 14px;
+      margin-top: 6px;
+      color: $color-black;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-family: "Poppins";
+      @include tablet {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+    }
+    &__desc {
+      font-size: 12px;
+      color: $color-grey-2;
+      @include tablet {
+        font-size: 12px;
+        line-height: 1.76;
+      }
+
+    }
+    &__slogan {
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: $color-grey;
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+    &__line {
+      width: 100%;
+      border: 0;
+      height: 2px;
+
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(1, 1, 1, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+      @include tablet {
+        height: 2px;
+      }
+    }
+    &__tech {
+      font-family: "Catamaran";
+      color: $color-grey-4;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: left;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      gap: 10px;
+      @include tablet {
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        font-size: 10px;
+        padding: auto;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin: auto;
+          @include tablet {
+          font-size: 12px;
+          background-color: rgba(0, 0, 0, 0.05);
+          padding: 18px;
+          text-align: left;
+          margin-left: 0px;
+          //text-align: center;
+          }
+
+          @include desktop {
+            font-size: 14px;
+          background-color: rgba(0, 0, 0, 0.05);
+          padding: 18px;
+          text-align: left;
+          margin-bottom: 10px;
+          margin-left: 0px;
+          }
+
+      }
+      &__icons {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        align-items: center;
+        gap: 5px;
+        @include tablet{
+          font-size: 18px;
+        }
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+        
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+  
+
+  &__ia {
+    width: 40%;
+    text-align: center;
+    font-family: "Catamaran";
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+    
+
+    &__image {
+      margin-top: 15px;
+      border-radius: 50%;
+      width: 73px;
+      height: 73px;
+      @include tablet {
+        //margin-top: 54px;
+        width: 110px;
+        height: 110px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &__job {
+      color: $color-grey-3;
+      margin-top: 6px;
+      font-size: 10px;
+      margin-bottom: 8px;
+      @include tablet {
+        margin-top: 11px;
+        font-size: 16px;
+      }
+    }
+    &__name {
+      font-size: 16px;
+      color: black;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      @include tablet {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+
+.fa-globe {
+  color: $color-grey-4;
+  @include tablet{
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  } 
+}
+}
+.fa-github {
+  color: $color-grey-4;
+  @include tablet{
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  
+}
+}
+
+.disabled {
+  pointer-events: none;
+}

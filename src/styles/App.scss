@@ -1,1 +1,132 @@
-/* Aquí van tus estilos */
+@import 'core/variables';
+@import 'core/reset';
+@import 'core/mixins';
+@import 'core/animations';
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/card';
+@import 'layout/form';
+@import 'layout/footer';
+@import 'layout/landing';
+
+
+.main .title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.main .ask-info {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.main .ask-info .subtitle {
+    padding-bottom: 10px;
+}
+
+.main .ask-info .line {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0));
+}
+
+
+.main .form {
+    background-color: #302c42;
+}
+
+.main .project,
+.main .autor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+}
+
+.main .input,
+.textarea {
+    background-color: #302c42;
+    border-color: white;
+    border-radius: 40px;
+    height: 42.72px;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.main .input::placeholder,
+.textarea::placeholder {
+    color: #ffffff;
+}
+
+.main .textarea {
+    height: 110px;
+}
+
+.main .buttons-img {
+    text-align: center;
+}
+
+.main .btn,
+.main .btn-large {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+}
+
+.main .btn-large {
+    width: 200px;
+    border: solid 2px white;
+}
+
+
+.main .preview .autor {
+    background-color: white;
+    color: #3e3e3e;
+    width: 90%;
+    height: 50%;
+    transform: translateY(-100px);
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+
+.btn-color {
+    border-radius: 20px;
+    width: 85px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.btn-color-dark {
+    background-color: black;
+    color: white;
+}
+
+.technologies {
+    background-color: lightgray;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px;
+    width: 70%;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,369 @@
+@import "../core/mixins";
+@import "../core/variables";
+* {
+      box-sizing: border-box;
+      margin: 0;
+}
+
+.form {
+  // margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 1px rgba(0, 0, 0, 0);
+  background-image: radial-gradient(circle at 50% 50%, #403a5f, #211e2e 92%);
+  padding: 15px 20px;
+  width: 100%;
+  @include tablet {
+  width: 40%;
+  
+  }
+  @include desktop {
+    width: 40%;
+    height: 90%;
+  }
+  @media all and (min-width: 1400px) {
+   // margin-top: 7rem;
+  }
+  @media all and (min-width: 1600px) {
+   // margin-top: 2rem;
+  }
+  &__title {
+    color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+   // font-weight: bold;
+    color: white;
+    // margin-top: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    @include tablet {
+    }
+    @include desktop {
+      //margin-left: 0.5px;
+    }
+  }
+
+  &__ask-info {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    @include tablet {
+    }
+
+    &__subtitle {
+      font-weight: 300;
+      font-size: 15px;
+      padding-bottom: 10px;
+      font-family: "Montserrat", sans-serif;
+      @include tablet {
+        
+      }
+      @include desktop {
+        // margin-left: 110px;
+        
+      }
+    }
+
+    &__line {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+      @include tablet {
+      }
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  width: 80vw;
+  @include tablet {
+    width: 100%;
+  }
+
+  &__input {
+    font: $font-montserrat-light-12px;
+    background-color: #302c42;
+    border-color: white;
+    border-radius: 40px;
+    height: 40px;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-top: 3px;
+  
+    &::placeholder {
+      color: #aaaaaa;
+    }
+
+    @include tablet {
+     
+    }
+    @include desktop {
+      
+    }
+  }
+
+  &__textarea {
+    font: $font-montserrat-light-12px;
+    height: 100px;
+    background-color: #302c42;
+    border-color: white;
+    border-radius: 40px;
+    color: #ffffff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      overflow-y: hidden;
+    
+      &::placeholder {
+        color: #aaaaaa;
+      }
+
+    @include tablet {
+    
+    }
+    @include desktop {
+     
+    }
+  }
+}
+
+.ask-info__autor {
+    padding: 20px;
+      text-align: center;
+      color: white;
+      width: 100%;
+
+  &__subtitle {
+    padding-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+ 
+    @include tablet {
+      
+    }
+    @include desktop {
+     
+    }
+  }
+
+  &__line {
+    width: 100%;
+    border: 0px;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0)
+    );
+    @include tablet {
+      width: 100%;
+      border: 0px;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+    @include desktop {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+  }
+}
+
+.autor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  width: 100%;
+  @include tablet {
+  }
+
+  &__input {
+    font: $font-montserrat-light-12px;
+    background-color: #302c42;
+    border-color: white;
+    border-radius: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-top: 3px;
+    
+      &::placeholder {
+        color: #aaaaaa;
+      }
+    @include tablet {
+      
+    }
+    @include desktop {
+      
+    }
+  }
+}
+
+.buttons-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttons-img {
+  font: $font-montserrat-regular-10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0 10px;
+  font-weight: bold;
+  @include tablet {
+    font-size: 0.7rem;
+      padding: 0px;
+  }
+  
+  @include desktop {
+    width: 12rem;
+      padding: 0 20px;
+      font-size: 0.8rem;
+  }
+  &__btn {
+    margin: 3px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 0 10px;
+    height: 38px;
+    // box-shadow: 10px 5px 5px #000;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    
+      @include tablet {
+        padding: 0 10px;
+      @include tablet {
+       // margin-right: 5px;
+      }
+      @include desktop {
+        padding: 0 20px;
+      }
+   
+  }
+}
+}
+
+
+.buttons-img-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+  &__btn-large {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    padding: 0 50px;
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+    border: solid 2px white;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include tablet {
+      padding: 0 40px;
+      font-weight: bold;
+    }
+
+    @include desktop {
+      padding: 0 50px;
+    }
+  }
+}
+
+
+.card {
+  
+  font-family: 'Montserrat';
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor:pointer; 
+ 
+ 
+  &__msg{
+    width: 180px;
+    height: 2rem;
+    border-radius: 40px;
+    color: white;
+    background-color: $color-bottom-gradient-light-violet;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid 2px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: wiggle 3s infinite;
+  }
+
+  @include tablet {
+  }
+}
+.hidden {
+  display: none;
+}
+
+.form__project {
+  width: 80vw;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.button-reset {
+  margin-top: 20px;
+  color: rgb(228, 39, 39);
+  padding: 10px;
+  background: white;
+  border-radius: 15rem;
+  border: none;
+  cursor: pointer;
+}
