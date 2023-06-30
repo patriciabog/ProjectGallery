@@ -21,7 +21,7 @@ mysql
         connection
             .connect()
             .then(() => {
-                console.log('Has been conected with database!!' + connection.threadId);
+                console.log(`Has been conected with database!! (identificador=${connection.threadId})`);
             })
             //the catch can catch errors
             .catch((err) => {
@@ -64,4 +64,48 @@ app.get("/api/projects/all", (req, res)=> {
         .catch((err) => {
             throw err;
         });
+});
+
+//Endpoint insert project using endpoint tipe POST
+
+app.post("/api/project/add", (req, res)=>{
+//we have to as from where is coming the data to insert in the project, in this case come from the body
+const data = req.body;
+console.log(data);
+//now we have to insert in the database, in this case consult sql projects adn authors
+let sqlAuthor = "INSERT INTO authors (author, job, photo) VALUES (?, ?, ?)";
+let valuesAuthor = [
+    data.author, data.job, data.photo
+];
+let sqlProject = "INSERT INTO projects (name, description, slogan, repo, technologies, image, fkIdAutor, infoURL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+connection
+.query(sqlAuthor, valuesAuthor)
+.then(([results, fields]) => {
+ console.log(results);
+ let valuesProject = [
+    data.name,
+    data.description,
+    data.slogan,
+    data.repo,
+    data.technologies,
+    data.image,
+    results.insertId
+ ];
+    connection
+        .query(sqlProject, valuesProject)
+        .then(([results, fields]) => {
+            let response = {
+                "success": true,
+                "cardURL":`http://localhost:4000/api/projects/${results.insertId}`
+            }
+            res.json(response);
+        })
+        .catch((err) => {
+            throw err;
+        });
+ 
+}).catch((err) => {
+    throw err;
 })
+
+});
